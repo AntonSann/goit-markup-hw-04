@@ -20,6 +20,10 @@ p {
   margin-bottom: 0;
 }
 
+img {
+  display: block;
+}
+
 .container.head {
   display: flex;
   justify-content: space-between;
@@ -86,8 +90,38 @@ p {
   padding-bottom: 24px;
 }
 
-.link.contact {
+.link.mail {
   color: var(--primary-text-color);
+  display: inline-flex;
+  align-items: center;
+}
+
+.link.mail::before {
+  content: "";
+  width: 16px;
+  height: 12px;
+  margin-right: 10px;
+  background-image: url(../img/envelope.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.link.phone {
+  color: var(--primary-text-color);
+  display: inline-flex;
+  align-items: center;
+}
+
+.link.phone::before {
+  content: "";
+  width: 10px;
+  height: 16px;
+  margin-right: 10px;
+  background-image: url(../img/smartphone.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .link:hover,
@@ -107,10 +141,23 @@ p {
 }
 
 .hero {
+  box-sizing: border-box;
+  max-width: 1600px;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../img/hero-background.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   padding-top: 200px;
   padding-bottom: 200px;
   text-align: center;
-  background-color: var(--secondary-background);
 }
 
 .hero-title {
@@ -179,7 +226,28 @@ p {
   margin-right: 0;
   padding-bottom: 10px;
 }
+.feature.item::before {
+  content: "";
+  display: block;
+  height: 120px;
+  margin-bottom: 30px;
+  background-color: var(--button-background);
+  background-repeat: no-repeat;
+  background-position: center;
+}
 
+.feature.item.antenna::before {
+  background-image: url(../img/antenna.svg);
+}
+.feature.item.clock::before {
+  background-image: url(../img/clock.svg);
+}
+.feature.item.diagram::before {
+  background-image: url(../img/diagram.svg);
+}
+.feature.item.astronaut::before {
+  background-image: url(../img/astronaut.svg);
+}
 .feature-text {
   font-size: 14px;
   line-height: 1.7;
@@ -223,8 +291,15 @@ p {
   margin-right: 0;
 }
 
+.team-content {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
 .team-title {
-  padding-bottom: 10px;
+  margin-bottom: 10px;
   color: var(--title-text-color);
   text-align: center;
 
@@ -234,14 +309,52 @@ p {
 }
 .team-img {
   display: block;
-  padding-bottom: 30px;
 }
 
 .team-text {
-  padding-bottom: 30px;
+  margin-bottom: 16px;
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
+}
+
+.social.list {
+  display: flex;
+  justify-content: center;
+  height: 44px;
+}
+
+.icon-social {
+  display: inline-block;
+
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--accent-color);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.icon-social.instagram {
+  background-image: url(../img/instagram.svg);
+}
+
+.icon-social.twitter {
+  background-image: url(../img/twitter.svg);
+}
+
+.icon-social.facebook {
+  background-image: url(../img/facebook.svg);
+}
+
+.icon-social.linkedin {
+  background-image: url(../img/linkedin.svg);
+}
+.social-item {
+  margin-right: 10px;
+}
+.social-item:last-child {
+  margin-right: 0;
 }
 
 .card-title {
@@ -274,6 +387,21 @@ p {
 .hero > .button {
   padding: 10px 32px;
 }
+.clients.list {
+  display: flex;
+  justify-content: center;
+}
+
+.clients.item {
+  margin-right: 30px;
+}
+.clients.item:last-child {
+  margin-right: 0;
+}
+
+.clients.section-title {
+  margin-bottom: 50px;
+}
 
 .portfolio-section {
   padding-top: 94px;
@@ -302,6 +430,7 @@ p {
 .portfolio-nav.button:focus {
   background-color: var(--accent-color);
   color: var(--white-color);
+  cursor: pointer;
 }
 
 .portfolio-but-item {
@@ -321,6 +450,12 @@ p {
   width: 370px;
   margin-right: 30px;
   margin-bottom: 30px;
+}
+
+.portfolio.item:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+  cursor: pointer;
 }
 
 .card-text.block {
@@ -366,12 +501,12 @@ footer {
 }
 .address-text {
   display: inline-block;
-  padding-bottom: 9px;
+  margin-bottom: 9px;
 }
 
 .footer-link {
   display: inline-block;
-  padding-bottom: 9px;
+  margin-bottom: 9px;
   color: var(--footer-link-color);
 
   font-weight: 400;
@@ -379,6 +514,62 @@ footer {
 
 .logo.footerlogo {
   display: inline-block;
-  padding-bottom: 20px;
+  margin-bottom: 20px;
   color: var(--white-color);
+}
+
+.container.footer {
+  display: flex;
+}
+
+.contacts-footer {
+  margin-right: 70px;
+}
+
+.join-footer {
+  margin-top: 12px;
+}
+
+.join-text {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: var(--white-color);
+  margin-bottom: 20px;
+}
+
+footer .social.list {
+  display: flex;
+}
+
+footer .icon-social {
+  display: block;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+footer .icon-social.instagram {
+  background-image: url(../img/instagram.svg);
+}
+
+footer .icon-social.twitter {
+  background-image: url(../img/twitter.svg);
+}
+
+footer .icon-social.facebook {
+  background-image: url(../img/facebook.svg);
+}
+
+footer .icon-social.linkedin {
+  background-image: url(../img/linkedin.svg);
+}
+
+footer .icon-social:hover,
+.icon-social:focus {
+  background-color: var(--accent-color);
 }
