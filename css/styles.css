@@ -562,7 +562,7 @@ footer .icon-social {
 
 footer .icon-social:hover,
 .icon-social:focus {
-  fill: var(--accent-color);
+  background-color: var(--accent-color);
 }
 
 footer .social-icon-svg {
