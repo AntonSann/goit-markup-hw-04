@@ -551,13 +551,18 @@ footer .social.list {
 }
 
 footer .icon-social {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 44px;
   height: 44px;
-  border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
-  background-repeat: no-repeat;
-  background-position: center;
+  border-radius: 50%;
+}
+
+footer .icon-social:hover,
+.icon-social:focus {
+  fill: var(--accent-color);
 }
 
 footer .icon-social.instagram {
