@@ -231,6 +231,7 @@ img {
   display: block;
   height: 120px;
   margin-bottom: 30px;
+  background-size: 70px 70px;
   background-color: var(--button-background);
   background-repeat: no-repeat;
   background-position: center;
@@ -329,6 +330,7 @@ img {
 
   width: 44px;
   height: 44px;
+  background-size: 20px;
   border-radius: 50%;
   background-color: var(--accent-color);
   background-repeat: no-repeat;
@@ -401,6 +403,11 @@ img {
 
 .clients.section-title {
   margin-bottom: 50px;
+}
+
+.client-img {
+  width: 170px;
+  height: 90px;
 }
 
 .portfolio-section {
