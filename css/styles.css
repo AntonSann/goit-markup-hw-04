@@ -565,6 +565,12 @@ footer .icon-social:hover,
   fill: var(--accent-color);
 }
 
+footer .social-icon-svg {
+  width: 20px;
+  height: 20px;
+  fill: var(--white-color);
+}
+
 footer .icon-social.instagram {
   background-image: url(../img/instagram.svg);
 }
