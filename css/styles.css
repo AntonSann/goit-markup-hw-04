@@ -225,15 +225,19 @@ img {
   margin-right: 0;
   padding-bottom: 10px;
 }
-.feature.item::before {
-  content: "";
+.feature-icon-block {
   display: block;
-  height: 120px;
   margin-bottom: 30px;
-  background-size: 70px 70px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  padding-left: 100px;
+  padding-right: 100px;
   background-color: var(--button-background);
-  background-repeat: no-repeat;
-  background-position: center;
+}
+
+.feature-icon {
+  width: 70px;
+  height: 70px;
 }
 
 .feature.item.antenna::before {
