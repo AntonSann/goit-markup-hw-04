@@ -240,18 +240,6 @@ img {
   height: 70px;
 }
 
-.feature.item.antenna::before {
-  background-image: url(../img/sprite.svg#antenna);
-}
-.feature.item.clock::before {
-  background-image: url(../img/sprite.svg#clock);
-}
-.feature.item.diagram::before {
-  background-image: url(../img/sprite.svg#diagram);
-}
-.feature.item.astronaut::before {
-  background-image: url(../img/sprite.svg#astronaut);
-}
 .feature-text {
   font-size: 14px;
   line-height: 1.7;
